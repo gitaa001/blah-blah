@@ -1,4 +1,4 @@
-package src;
+package src.map;
 
 public class FarmMap {
     private static int sizeWidth = 32;

@@ -1,4 +1,4 @@
-package src;
+package src.map;
 
 public class Point {
     private int x;

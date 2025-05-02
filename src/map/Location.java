@@ -1,4 +1,4 @@
-package src;
+package src.map;
 
 public class Location {
     private String name;

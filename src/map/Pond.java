@@ -1,4 +1,5 @@
-package src;
+package src.map;
+
 public class Pond {
     private Point pondPoint;
 
