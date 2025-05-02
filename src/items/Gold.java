@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class Gold {
     private int goldAmount;

@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class Misc extends Item {
     private String itemDescription;

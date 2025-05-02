@@ -1,4 +1,4 @@
-package src;
+package src.items;
 //ganti season nanti
 
 public class Seed extends Item {

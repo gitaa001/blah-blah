@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class Pickaxe extends Equipment {
     public Pickaxe(String pickName, Gold sellPrice, Gold buyPrice, int useEnergy){

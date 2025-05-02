@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class Hoe extends Equipment {
     public Hoe(String hoeName, Gold sellPrice, Gold buyPrice, int useEnergy){

@@ -1,4 +1,4 @@
-package src;
+package src.items;
 //ganti location sm weather
 
 public class Fish extends Item{

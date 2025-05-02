@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class FishingRod extends Equipment {
     public FishingRod(String rodName, Gold sellPrice, Gold buyPrice, int useEnergy){

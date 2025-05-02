@@ -3,6 +3,17 @@ package src;
 import java.util.HashMap;
 import java.util.Map;
 
+import src.items.Crop;
+import src.items.Equipment;
+import src.items.Fish;
+import src.items.FishingRod;
+import src.items.Food;
+import src.items.Gold;
+import src.items.Hoe;
+import src.items.Inventory;
+import src.items.Misc;
+import src.items.Seed;
+
 public class Main {
     public static void main(String[] args) {
         // Inisialisasi inventory

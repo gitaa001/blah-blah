@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class WateringCan extends Equipment {
     public WateringCan(String wCanName, Gold sellPrice, Gold buyPrice, int useEnergy){

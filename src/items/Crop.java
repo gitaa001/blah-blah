@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class Crop extends Item{
     private Gold sellPrice;

@@ -1,4 +1,5 @@
-package src;
+package src.items;
+
 //nanti use abis jadi player aja
 public abstract class Equipment extends Item{
     private Gold sellPrice;

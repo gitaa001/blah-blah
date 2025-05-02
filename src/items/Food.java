@@ -1,4 +1,4 @@
-package src;
+package src.items;
 
 public class Food extends Item {
     private int giveEnergy;
