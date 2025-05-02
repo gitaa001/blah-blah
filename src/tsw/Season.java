@@ -1,4 +1,4 @@
-package src;
+package src.tsw;
 
 public class Season {
     public enum Seasons {

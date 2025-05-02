@@ -1,4 +1,4 @@
-package src;
+package src.tsw;
 import java.lang.Thread;
 
 public class Time implements Runnable{

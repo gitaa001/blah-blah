@@ -1,5 +1,9 @@
 package src;
 
+import src.tsw.Season;
+import src.tsw.Time;
+import src.tsw.Weather;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("===== TESTING ALL CLASSES =====");
