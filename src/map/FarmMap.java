@@ -1,18 +1,20 @@
 package src.map;
 
+import src.entities.*;
+
 public class FarmMap {
-    private static int sizeWidth = 32;
-    private static int sizeHeight = 32;
+    private static int farmSizeWidth = 32;
+    private static int farmSizeHeight = 32;
     private Point housePosition;
     private Point pondPosition;
-    private Point playerPosition;
-    private char[][] mapDisplay;
+    private Point playerPositionFarm;
+    private char[][] farmMapDisplay;
 
     public FarmMap(Point housePosition, Point pondPosition, Point playerPosition) {
         this.housePosition = housePosition;
         this.pondPosition = pondPosition;
-        this.playerPosition = playerPosition;
-        this.mapDisplay = new char[sizeHeight][sizeWidth];
+        this.playerPositionFarm = playerPosition;
+        this.farmMapDisplay = new char[farmSizeHeight][farmSizeWidth];
     }
 
     public Point getHousePosition(){
@@ -24,13 +26,17 @@ public class FarmMap {
     }
 
     public Point getPlayerPosition(){
-        return playerPosition;
+        return playerPositionFarm;
     }
 
-    // nanti p ini itu parameter buat Player p
-    public void movePlayer(){
-        Point p = new Point(0,0);
+    public char[][] getFarmMapDisplay(){
+        return farmMapDisplay;
     }
+    // nanti p ini itu parameter buat Player p
+    public void movePlayer(Player p){
+        
+    }
+
 
 
 }

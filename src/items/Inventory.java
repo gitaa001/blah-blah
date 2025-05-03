@@ -98,4 +98,14 @@ public class Inventory {
             }
         }
     }
+
+    public boolean hasItem(String itemName) {
+        for (Map<String, Integer> itemMap : inventoryStorage.values()) {
+            if (itemMap.containsKey(itemName)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
 }
