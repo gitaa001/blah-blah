@@ -4,7 +4,7 @@ public class Misc extends Item {
     private String itemDescription;
 
     public Misc(String itemName, String itemDescription) {
-        super(itemName, "Misc");
+        super(itemName, "Misc", false, new Gold(0));
         this.itemDescription = itemDescription;
     }
 

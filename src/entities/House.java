@@ -1,17 +1,20 @@
 package src.entities;
 
 import java.util.List;
+import src.map.*;
 import java.util.ArrayList;
 
 public class House {
     private int totalNPCInside;
     private List<NPC> npcInside = new ArrayList<NPC>();
     private List<Furniture> furnitureList = new ArrayList<Furniture>();
+    private HouseMap houseMap;
 
-    public House(int totalNPCInside, List<NPC> npcInside, List<Furniture> furnitureList) {
+    public House(int totalNPCInside, List<NPC> npcInside, List<Furniture> furnitureList, HouseMap houseMap) {
         this.totalNPCInside = totalNPCInside;
         this.npcInside = npcInside;
         this.furnitureList = furnitureList;
+        this.houseMap = houseMap;
     }
 
     public int getTotalNPCInside() {
@@ -24,6 +27,10 @@ public class House {
 
     public List<Furniture> getFurnitureList() {
         return furnitureList;
+    }
+
+    public HouseMap getHouseMap() {
+        return houseMap;
     }
 
     public void setTotalNPCInside(int totalNPCInside) {

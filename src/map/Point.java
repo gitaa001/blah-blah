@@ -33,16 +33,16 @@ public class Point {
         prevY = this.y;
 
         switch (direction.toLowerCase()) {
-            case "left":
+            case "up":
                 newY = this.y - 1;
                 break;
-            case "right":
+            case "down":
                 newY = this.y + 1;
                 break;
-            case "up":
+            case "left":
                 newX = this.x - 1;
                 break;
-            case "down":
+            case "right":
                 newX = this.x + 1;
                 break;
             default:
@@ -71,6 +71,10 @@ public class Point {
     }
     public int[] getPreviousPosition() {
         return new int[] {this.prevX, this.prevY};
+    }
+
+    public String printPoint() {
+        return "(" + x + ", " + y + ")";
     }
 
 }

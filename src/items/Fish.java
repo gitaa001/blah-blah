@@ -9,10 +9,9 @@ public class Fish extends Item{
     private String rarity;
 
     public Fish(String itemName, String timeRanges, String fishLocations, Gold sellBasePrice, String rarity){
-        super(itemName, "Fish");
+        super(itemName, "Fish", true, sellBasePrice);
         this.timeRanges = timeRanges;
         this.fishLocations = fishLocations;
-        this.sellBasePrice = sellBasePrice;
         this.rarity = rarity;
     }
 
@@ -28,17 +27,17 @@ public class Fish extends Item{
         return fishLocations;
     }
 
-    public int getSellBasePrice(){
-        return sellBasePrice.getGold();
+    public Gold getSellBasePrice(){
+        return sellBasePrice;
     }
     
     public String getRarity(){
         return rarity;
     }
 
-    public int countSellPrice(){
+    public Gold getSellPrice(){
         // kerjain kl dah ada season time weather
-        int p = 0;
+        Gold p = new Gold(0);
         return p;
     }
 

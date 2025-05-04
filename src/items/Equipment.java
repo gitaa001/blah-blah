@@ -2,20 +2,16 @@ package src.items;
 
 //nanti use abis jadi player aja
 public abstract class Equipment extends Item{
-    private Gold sellPrice;
     private Gold buyPrice;
     private int useEnergy;
     String equipmentType;
 
     public Equipment(String itemName, Gold sellPrice, Gold buyPrice, int useEnergy, String equipmentType){
-        super(itemName, "Equipment");
+        super(itemName, "Equipment",true, sellPrice);
         this.buyPrice = buyPrice;
         this.useEnergy = useEnergy;
     }
 
-    public int getSellPrice(){
-        return sellPrice.getGold();
-    }
 
     public int getBuyPrice(){
         return buyPrice.getGold();

@@ -47,8 +47,8 @@ public class Player {
     }
 
 
-    public int getPlayerGold() {
-        return playerGold.getGold();
+    public Gold getPlayerGold() {
+        return playerGold;
     }
 
     public Inventory getPlayerInventory() {

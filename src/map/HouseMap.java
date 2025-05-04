@@ -10,14 +10,14 @@ public class HouseMap {
     private static int houseSizeWidth = 24;
     private static int houseSizeHeight = 24;
     private char[][] houseMapDisplay;
-    private Map<Furniture, List<Point>> furnitureLocation = new HashMap<>();
+    private Map<Furniture, List<Point>> furnitureLocation;
     private Point playerPositionHouse;
 
 
-    public HouseMap(Point playerPositionHouse, Map<Furniture, List<Point>> furnitureLocation) {
+    public HouseMap(Point playerPositionHouse) {
         this.playerPositionHouse = playerPositionHouse;
         this.houseMapDisplay = new char[houseSizeHeight][houseSizeWidth];
-        this.furnitureLocation = furnitureLocation;
+        this.furnitureLocation = new HashMap<>();
 
         for (int i = 0; i < houseSizeHeight; i++) {
             for (int j = 0; j < houseSizeWidth; j++) {
@@ -84,7 +84,7 @@ public class HouseMap {
     public void displayHouse() {
         for (int i = 0; i < houseSizeHeight; i++) {
             for (int j = 0; j < houseSizeWidth; j++) {
-                if (playerPositionHouse.getX() == i && playerPositionHouse.getY() == j) {
+                if (playerPositionHouse.getY() == i && playerPositionHouse.getX() == j) {
                     System.out.print('P');
                 } else {
                     System.out.print(houseMapDisplay[i][j]);
@@ -93,7 +93,18 @@ public class HouseMap {
             System.out.println(); 
         }
     }
-
     
+
+    public void displayObjectPositions() {
+        for (Furniture furniture : furnitureLocation.keySet()) {
+            System.out.print(furniture.getFurnitureName() + ": ");
+            List<Point> points = furnitureLocation.get(furniture);
+            for (Point point : points) {
+                System.out.print(point.printPoint() + " ");
+            }
+            System.out.println();
+        }
+    }
+
 
 }

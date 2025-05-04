@@ -7,14 +7,14 @@ public class Seed extends Item {
     private String validSeason;
 
     public Seed(String itemName, Gold buyPrice, int harvestDays, String validSeason){
-        super(itemName, "Seed");
+        super(itemName, "Seed", false, new Gold(0));
         this.buyPrice = buyPrice;
         this.harvestDays = harvestDays;
         this.validSeason = validSeason;
     }
 
-    public int getbuyPrice() {
-        return buyPrice.getGold();
+    public Gold getbuyPrice() {
+        return buyPrice;
     }
     
     public int getHarvestDays(){

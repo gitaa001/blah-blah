@@ -5,10 +5,8 @@ import src.map.*;
 import src.items.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.HashMap;
 
-public class Main {
+public class HouseMapTes {
     public static void main(String[] args) {
         // 1. Inisialisasi Manager
         List<Player> players = new ArrayList<>();
@@ -32,11 +30,7 @@ public class Main {
         System.out.println("- " + oldKey.getItemName() + " (" + oldKey.getItemType() + "): " + oldKey.getItemDescription());
 
         // 3. Inisialisasi Inventory
-        Map<Class<?>, Map<String, Integer>> initialStorage = new HashMap<>();
-        initialStorage.put(Item.class, new HashMap<>());
-        initialStorage.put(Misc.class, new HashMap<>());
-        
-        Inventory playerInventory = new Inventory(initialStorage);
+        Inventory playerInventory = new Inventory();
 
         // 4. Membuat NPC dengan preferensi item
         System.out.println("\n=== NPC Setup ===");
@@ -89,7 +83,7 @@ public class Main {
         System.out.println("\n=== House Setup ===");
         
         Point playerHousePosition = playerLocation.getCurrentPoint();
-        HouseMap houseMap = new HouseMap(playerHousePosition, new HashMap<>());
+        HouseMap houseMap = new HouseMap(playerHousePosition);
 
         // Membuat dan menempatkan furniture
         Bed bed = new Bed("bed1", "King Bed", "A comfortable king size bed", 2, 3, 2);
@@ -118,24 +112,28 @@ public class Main {
         playerPos.movePlayer("up", houseMap.getHouseMapDisplay());
         System.out.println("Moved forward to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
 
-
-        playerPos.movePlayer("left", houseMap.getHouseMapDisplay());
-        System.out.println("Moved left to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
-
-        playerPos.movePlayer("left", houseMap.getHouseMapDisplay());
-        
-        
         playerPos.movePlayer("up", houseMap.getHouseMapDisplay());
         System.out.println("Moved forward to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
 
         playerPos.movePlayer("left", houseMap.getHouseMapDisplay());
         System.out.println("Moved left to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
 
+        playerPos.movePlayer("left", houseMap.getHouseMapDisplay());
+        
+        
+        // playerPos.movePlayer("up", houseMap.getHouseMapDisplay());
+        // System.out.println("Moved forward to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
+
+        // playerPos.movePlayer("left", houseMap.getHouseMapDisplay());
+        // System.out.println("Moved left to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
+
         playerPos.movePlayer("down", houseMap.getHouseMapDisplay());
 
-        playerPos.movePlayer("left", houseMap.getHouseMapDisplay());
-        System.out.println("Moved left to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
+        // playerPos.movePlayer("left", houseMap.getHouseMapDisplay());
+        // System.out.println("Moved left to: (" + playerPos.getX() + "," + playerPos.getY() + ")");
 
         houseMap.displayHouse();
+
+        houseMap.displayObjectPositions();
     }
 }
