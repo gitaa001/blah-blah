@@ -16,6 +16,14 @@ public class Location {
     public Point getCurrentPoint(){
         return currentPoint;
     }
+
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setPoint(Point point){
+        this.currentPoint = point;
+    }
     
     
     

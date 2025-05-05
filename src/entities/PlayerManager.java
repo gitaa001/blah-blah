@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerManager {
-    private List<Player> playerList = new ArrayList<Player>();
+    private List<Player> playerList;
 
-    public PlayerManager(List<Player> playerList) {
-        this.playerList = playerList;
+    public PlayerManager() {
+        this.playerList = new ArrayList<Player>();
     }
     public void addPlayer(Player player) {
         playerList.add(player);

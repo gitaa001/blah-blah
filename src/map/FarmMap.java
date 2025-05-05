@@ -193,5 +193,16 @@ public class FarmMap {
             System.out.println(); 
         }
     }
+
+    public boolean isAtEdge(Point playerPositionFarm) {
+        int x = playerPositionFarm.getX();
+        int y = playerPositionFarm.getY();
+        return x == 0 || x == 31 || y == 0 || y == 31;
+    }
+
+    public boolean canToggleWorldMap(WorldMap worldMap) {
+        return isAtEdge(playerPositionFarm) && worldMap.getPlayerLocation().getName().equals("Farm");
+    }
+    
     
 }
