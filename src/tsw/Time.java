@@ -7,6 +7,8 @@ public class Time implements Runnable{
     private int day = 1;
     private int lastDay = 1;
     private boolean running = true;
+    private boolean paused = false;
+    private final Object lock = new Object();
     Season season;
     Weather weather;
 
@@ -21,8 +23,13 @@ public class Time implements Runnable{
     public void run() {
         while (running) {
             try {
-                Thread.sleep(1000);
+                synchronized (lock) {
+                    while (paused) {
+                        lock.wait();
+                    }
+                }
                 advanceTime(5);
+                Thread.sleep(1000);
                 changeDay();
                 if (day % 10 == 0) {
                     season.changeSeaons();
@@ -91,5 +98,16 @@ public class Time implements Runnable{
 
     public void stopTime() {
         running = false;
+    }
+
+    public void pauseTime() {
+        paused = true;
+    }
+
+    public void resumeTime() {
+        synchronized (lock) {
+            paused = false;
+            lock.notify();
+        }
     }
 }
