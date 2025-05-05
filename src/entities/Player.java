@@ -7,7 +7,6 @@ public class Player {
     private String playerName;
     private String gender;
     private int energy;
-    private int heartPoints;
     private int MAX_ENERGY = 100;
     private String farmName;
     private NPC partner;
@@ -19,7 +18,6 @@ public class Player {
         this.playerName = playerName;
         this.gender = gender;
         this.energy = MAX_ENERGY;
-        this.heartPoints = 0;
         this.farmName = farmName;
         this.partner = partner;
         this.playerGold = playerGold;
@@ -38,10 +36,6 @@ public class Player {
 
     public int getEnergy() {
         return energy;
-    }
-
-    public int getHeartPoints() {
-        return heartPoints;
     }
 
     public String getFarmName() {
