@@ -1,25 +1,36 @@
 package src.map;
 
+import src.entities.*;
+
 public class WorldMap {
-    private Location location;
-    private Boolean active;
+    private Player player;
 
-    public WorldMap(Location location) {
-        this.location = location;
-        active = false;
+    public WorldMap(Player player) {
+        this.player = player;
     }
 
-    public Location getLocation() {
-        return location;
+    public Location getPlayerLocation() {
+        return player.getPlayerLocation();
     }
-
-    public void toggleMap(){
-        active = !active;
-    }
-
-    //parameter ini nanti diisi player.location
+    
     public void returnToFarm(){
-        location = new Location("Farm", new Point(0,0));
+        player.setPlayerLocation(new Location("Farm", new Point(16, 16)));
     }
+
+    public void displayWorldMap(){
+        System.out.println("World Map:");
+        System.out.println("Where do you want to go?");
+        System.out.println("1. Forest River");
+        System.out.println("2. Mountain Lake");
+        System.out.println("3. Store");
+        System.out.println("4. NPCs Home");
+        System.out.println("5. Exit");
+    }
+
+    public void visit(Location place){
+        player.setPlayerLocation(place);
+        player.addVisitedPlace(place.getName());
+    }
+
 
 }

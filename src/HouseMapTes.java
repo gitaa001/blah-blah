@@ -9,11 +9,9 @@ import java.util.List;
 public class HouseMapTes {
     public static void main(String[] args) {
         // 1. Inisialisasi Manager
-        List<Player> players = new ArrayList<>();
-        PlayerManager playerManager = new PlayerManager(players);
-        
-        List<NPC> npcs = new ArrayList<>();
-        NPCManager npcManager = new NPCManager(npcs);
+        PlayerManager playerManager = new PlayerManager();
+    
+        NPCManager npcManager = new NPCManager();
 
         // 2. Membuat Item dan Misc
         System.out.println("\n=== Item Creation ===");

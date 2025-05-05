@@ -4,14 +4,9 @@ import src.map.*;
 import src.entities.*;
 import src.items.*;
 
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class FarmMapTes {
     public static void main(String[] args) {
-        List<Player> players = new ArrayList<>();
-        PlayerManager playerManager = new PlayerManager(players);
+        PlayerManager playerManager = new PlayerManager();
         Gold playerGold = new Gold(1000);
         Inventory playerInventory = new Inventory();
         Location playerLocation = new Location("House", new Point(10, 10));

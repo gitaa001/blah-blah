@@ -1,5 +1,7 @@
 package src.entities;
 
+import java.util.List;
+import java.util.ArrayList;
 import src.map.*;
 import src.items.*;
 
@@ -14,6 +16,7 @@ public class Player {
     private Gold playerGold;
     private Inventory playerInventory;
     private Location playerLocation;
+    private List<String> visitedPlace;
 
     public Player(String playerName, String gender, Farm farm, NPC partner, Gold playerGold, Inventory playerInventory, Location playerLocation, PlayerManager playerManagerList) {
         this.playerName = playerName;
@@ -25,6 +28,7 @@ public class Player {
         this.playerGold = playerGold;
         this.playerInventory = playerInventory;
         this.playerLocation = playerLocation;
+        visitedPlace = new ArrayList<>();
         playerManagerList.addPlayer(this);
     }
 
@@ -64,7 +68,6 @@ public class Player {
     public Location getPlayerLocation() {
         return playerLocation;
     }
-
 
     /*============= SETTER =============== */
     public void setPlayerName(String playerName) {
@@ -113,6 +116,16 @@ public class Player {
             this.energy = 0;
         }
         this.energy -= amount;
+    }
+
+    public List<String> getVisitedPlace() {
+        return visitedPlace;
+    }
+
+    public void addVisitedPlace(String place) {
+        if (!visitedPlace.contains(place)) {
+            visitedPlace.add(place);
+        }
     }
 
     

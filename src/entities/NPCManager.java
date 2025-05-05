@@ -4,10 +4,10 @@ import java.util.List;
 import java.util.ArrayList;
 
 public class NPCManager{
-    private List<NPC> npcList = new ArrayList<NPC>();
+    private List<NPC> npcList;
 
-    public NPCManager(List<NPC> npcList) {
-        this.npcList = npcList;
+    public NPCManager() {
+        this.npcList = new ArrayList<NPC>();
     }
     public void addNPC(NPC npc) {
         npcList.add(npc);
